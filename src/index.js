@@ -9,3 +9,14 @@ root.render(
 		<App />
 	</React.StrictMode>
 );
+
+
+// Correct viewport height
+const resizeViewPort = () => {
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+};
+// First run for render correct vh
+resizeViewPort();
+// Adding listener for resize window
+window.addEventListener('resize', resizeViewPort);

@@ -1,0 +1,58 @@
+/*? == ToDo Item == */
+
+.card {
+	color: var(--color-black);
+
+	min-width: 210px;
+
+	padding: 16px;
+
+	border-radius: 8px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	cursor: move;
+}
+
+.close-btn {
+	width: 20px;
+	height: 20px;
+	z-index: 100px;
+
+	position: absolute;
+	top: 50%;
+	right: 13px;
+	transform: translateY(-50%) rotateZ(0deg);
+
+	transition: all .4s ease;
+}
+
+.close-btn:hover {
+	transform: translateY(-50%) rotateZ(180deg);
+}
+
+.close-btn::before,
+.close-btn::after {
+	content: '';
+	display: block;
+	width: 14px;
+	height: 2px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform-origin: center;
+
+	border-radius: 10px;
+	background-color: var(--color-black);
+}
+
+.close-btn::before {
+	transform: translate(-50%, -50%) rotateZ(45deg);
+}
+
+.close-btn::after {
+	transform: translate(-50%, -50%) rotateZ(-45deg);
+}
