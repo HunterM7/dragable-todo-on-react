@@ -6,7 +6,13 @@ function App() {
 		<div className="App">
 			<div className="wrapper">
 
-			
+				<input
+					className='input'
+					type='text'
+					placeholder='Enter Something'
+				/>
+
+				<button className='btn'>Enter</button>
 
 			</div>
 		</div>
